@@ -70,7 +70,7 @@ def validate_login(driver):
 def test_login_with_excel_data(setup_driver, lp_value):
     """Test login using data from Excel for multiple users."""
     # Path to the Excel file
-    excel_path = 'C:/Users/barte/PycharmProjects/selenium_kurs/test_login_with_exceldata/data/users.xlsx'
+    excel_path = 'Add path to users.xlsx file'
 
     # Get user credentials from Excel
     username, password = read_data_from_excel(excel_path, lp_value)
