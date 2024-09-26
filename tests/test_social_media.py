@@ -16,7 +16,7 @@ from pages.base_page import BasePage
 @pytest.fixture(scope="module")
 def setup_driver():
     # Path to the Edge driver
-    driver_path = 'C:/Users/barte/PycharmProjects/selenium_kurs/test_login_with_exceldata/driver/msedgedriver.exe'
+    driver_path = 'Add your path to driver'
 
     # Creating an instance of Service and setting browser options
     service = EdgeService(driver_path)
