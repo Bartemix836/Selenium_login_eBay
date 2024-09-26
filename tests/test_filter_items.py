@@ -54,7 +54,7 @@ def read_data_from_excel(excel_path, lp_value):
 
 
 def test_user_workflow(setup_driver):
-    excel_path = 'C:/Users/barte/PycharmProjects/selenium_kurs/test_login_with_exceldata/data/users.xlsx'
+    excel_path = 'Add path to users.xlsx file'
     lp_value = 1  # Dynamically change the LP value
     username, password = read_data_from_excel(excel_path, lp_value)
 
