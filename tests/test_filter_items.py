@@ -67,17 +67,17 @@ def test_user_workflow(setup_driver):
 
     # STEP1 - Enter the username:
     login_input_xpath = '//*[@id="user-name"]'
-    login_input = wait.until(EC.element_to_be_clickable((By.XPATH, login_input_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, login_input_xpath)))
     base_page.fill_text_field(By.XPATH, login_input_xpath, username)
 
     # STEP2 - Enter the password:
     passwd_input_xpath = '//*[@id="password"]'
-    passwd_input = wait.until(EC.element_to_be_clickable((By.XPATH, passwd_input_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, passwd_input_xpath)))
     base_page.fill_text_field(By.XPATH, passwd_input_xpath, password)
 
     # STEP3: Click the Login button
     login_btn_xpath = '//*[@id="login-button"]'
-    passwd_input = wait.until(EC.element_to_be_clickable((By.XPATH, login_btn_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, login_btn_xpath)))
     base_page.click_element(By.XPATH, login_btn_xpath)
 
     # STEP4 - Select the sorting criterion "Price (high to low)":
@@ -86,52 +86,52 @@ def test_user_workflow(setup_driver):
 
     # STEP5 - Add products to the cart
     add_btn1_xpath = '//*[@id="add-to-cart-sauce-labs-fleece-jacket"]'
-    add_product1 = wait.until(EC.element_to_be_clickable((By.XPATH, add_btn1_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, add_btn1_xpath)))
     base_page.click_element(By.XPATH, add_btn1_xpath)
 
     add_btn2_xpath = '//*[@id="add-to-cart-sauce-labs-backpack"]'
-    add_product2 = wait.until(EC.element_to_be_clickable((By.XPATH, add_btn2_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, add_btn2_xpath)))
     base_page.click_element(By.XPATH, add_btn2_xpath)
 
     # STEP6 - Go to the cart
     cart_xpath = '//*[@id="shopping_cart_container"]/a'
-    go_cart = wait.until(EC.element_to_be_clickable((By.XPATH, cart_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, cart_xpath)))
     base_page.click_element(By.XPATH, cart_xpath)
 
     # STEP7 - Click the Checkout button
     checkout_btn_xpath = '/html/body/div/div/div/div[2]/div/div[2]/button[2]'
-    click_checkoutbtn = wait.until(EC.element_to_be_clickable((By.XPATH, checkout_btn_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, checkout_btn_xpath)))
     base_page.click_element(By.XPATH, checkout_btn_xpath)
 
     # STEP8 - Fill in the text fields
     # First name
     firstname_xpath = '//*[@id="first-name"]'
-    firstname = wait.until(EC.element_to_be_clickable((By.XPATH, firstname_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, firstname_xpath)))
     base_page.fill_text_field(By.XPATH, firstname_xpath, 'test_name01')
 
     # Last name
     lastname_xpath = '//*[@id="last-name"]'
-    lastname = wait.until(EC.element_to_be_clickable((By.XPATH, lastname_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, lastname_xpath)))
     base_page.fill_text_field(By.XPATH, lastname_xpath, 'test_lastname01')
 
     # Postal code
     zip_xpath = '//*[@id="postal-code"]'
-    zip = wait.until(EC.element_to_be_clickable((By.XPATH, zip_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, zip_xpath)))
     base_page.fill_text_field(By.XPATH, zip_xpath, '50-431')
 
     # STEP9 - Click the Continue button
     continue_btn_xpath = '//*[@id="continue"]'
-    click_continuebtn = wait.until(EC.element_to_be_clickable((By.XPATH, continue_btn_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, continue_btn_xpath)))
     base_page.click_element(By.XPATH, continue_btn_xpath)
 
     # STEP10 - Click the Finish button
     finish_btn_xpath = '//*[@id="finish"]'
-    click_finishbtn = wait.until(EC.element_to_be_clickable((By.XPATH, finish_btn_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, finish_btn_xpath)))
     base_page.click_element(By.XPATH, finish_btn_xpath)
 
     # STEP11 - Click the back to home button
     backhome_btn_xpath = '//*[@id="back-to-products"]'
-    click_homebtn = wait.until(EC.element_to_be_clickable((By.XPATH, backhome_btn_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, backhome_btn_xpath)))
     base_page.click_element(By.XPATH, backhome_btn_xpath)
 
     print('-----------------------------------------------------------------------------------')
