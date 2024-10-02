@@ -85,17 +85,17 @@ def test_login_with_excel_data(setup_driver, lp_value):
 
     # STEP1 - Enter the username
     login_input_xpath = '//*[@id="user-name"]'
-    login_input = wait.until(EC.element_to_be_clickable((By.XPATH, login_input_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, login_input_xpath)))
     base_page.fill_text_field(By.XPATH, login_input_xpath, username)
 
     # STEP2 - Enter the password
     passwd_input_xpath = '//*[@id="password"]'
-    passwd_input = wait.until(EC.element_to_be_clickable((By.XPATH, passwd_input_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, passwd_input_xpath)))
     base_page.fill_text_field(By.XPATH, passwd_input_xpath, password)
 
     # STEP3 - Click the login button
     login_btn_xpath = '//*[@id="login-button"]'
-    login_button = wait.until(EC.element_to_be_clickable((By.XPATH, login_btn_xpath)))
+    wait.until(EC.element_to_be_clickable((By.XPATH, login_btn_xpath)))
     base_page.click_element(By.XPATH, login_btn_xpath)
 
     # STEP4 - Verify the result of the login
